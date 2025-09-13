@@ -287,9 +287,8 @@ const Courses = () => {
             </Button>
             <Button 
               size="lg" 
-              variant="outline"
-              className="text-lg px-8 py-6 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-              onClick={() => window.open('tel:9930308817')}
+             variant="secondary"
+              className="text-lg px-8 py-6" onClick={() => window.open('tel:9930308817')}
             >
               Call for Information
             </Button>

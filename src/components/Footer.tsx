@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="text-center md:text-right text-sm">
             <p className="mb-1">© All rights reserved Zia Classes</p>
             <p className="text-primary-foreground/70">
-  Designed by{" "}
+  Developed by{" "}
   <a 
     href="https://myresume-coral-five.vercel.app/my-resume"  
     target="_blank" 

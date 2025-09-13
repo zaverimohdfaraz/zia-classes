@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 // import { Badge } from '@/components/ui/badge';
+
+import { useState, useRef, useEffect } from "react";
+
 import { 
   GraduationCap, 
   Users, 
@@ -19,7 +22,7 @@ import {
 const Home = () => {
   const achievements = [
     { icon: GraduationCap, label: '10+ Years', description: 'Teaching Excellence' },
-    { icon: Users, label: '500+', description: 'Students Guided' },
+    { icon: Users, label: '5000+', description: 'Students Guided' },
     { icon: Trophy, label: '100%', description: 'Result Oriented' },
     { icon: Clock, label: 'Flexible', description: 'Timing Options' }
   ];
@@ -38,6 +41,21 @@ const Home = () => {
     whatsapp: '9930308817',
     address: 'Kurla West, Mumbai'
   };
+const [show, setShow] = useState(false);
+const dropdownRef = useRef(null);
+
+useEffect(() => {
+  function handleClickOutside(event) {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setShow(false); // close dropdown
+    }
+  }
+
+  document.addEventListener("mousedown", handleClickOutside);
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
 
   return (
     <div className="min-h-screen">
@@ -51,7 +69,7 @@ const Home = () => {
               <div className="space-y-4">
                 {/* <Badge variant="secondary" className="bg-success/10 text-success border-success/20">
                   <CheckCircle className="w-3 h-3 mr-1" />
-                  Since 2012 - Trusted by 500+ Families
+                  Since 2012 - Trusted by 5000+ Families
                 </Badge> */}
                 <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                   Light for{' '}
@@ -89,10 +107,26 @@ const Home = () => {
 
               {/* Quick Contact */}
               <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
-                <div className="flex items-center">
-                  <Phone className="w-4 h-4 mr-1 text-trust" />
-                  {quickInfo.phone}
-                </div>
+                <div className="relative">
+  <button
+    onClick={() => setShow(!show)}
+    className="flex items-center text-trust focus:outline-none"
+  >
+    <Phone className="w-4 h-4 mr-1 lg:mt-0.5" />
+  </button>
+
+ {show && (
+  <div
+    ref={dropdownRef}
+    className="absolute left-0 mt-2 bg-white shadow-lg rounded-md p-2 space-y-1 text-sm z-10"
+  >
+    <a href="tel:+919930308817" className="block hover:underline">9930308817</a>
+    <a href="tel:+918655499073" className="block hover:underline">8655499073</a>
+    <a href="tel:+918286190685" className="block hover:underline">8286190685</a>
+  </div>
+)}
+</div>
+
                 <div className="flex items-center">
                   <MapPin className="w-4 h-4 mr-1 text-trust" />
                   {quickInfo.address}
@@ -204,7 +238,7 @@ const Home = () => {
             Ready to Start Your Child's Success Journey?
           </h2>
           <p className="text-xl text-primary-foreground/80 mb-8">
-            Join 500+ families who trust Zia Classes for quality education
+            Join 5000+ families who trust Zia Classes for quality education
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 

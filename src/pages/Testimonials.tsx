@@ -89,7 +89,7 @@ const Testimonials = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Happy Students', icon: Users },
+    { number: '5000+', label: 'Happy Students', icon: Users },
     { number: '95%', label: 'Parent Satisfaction', icon: Heart },
     { number: '85%', label: 'Average Improvement', icon: TrendingUp },
     { number: '10+', label: 'Years Trusted', icon: Award }
@@ -250,7 +250,7 @@ const Testimonials = () => {
                 </p>
                 <div className="grid md:grid-cols-3 gap-6 text-center">
                   <div>
-                    <div className="text-3xl font-bold text-primary">500+</div>
+                    <div className="text-3xl font-bold text-primary">5000+</div>
                     <div className="text-muted-foreground">Students Taught</div>
                   </div>
                   <div>

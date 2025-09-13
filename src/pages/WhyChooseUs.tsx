@@ -58,7 +58,7 @@ const WhyChooseUs = () => {
 
   const achievements = [
     { number: '10+', label: 'Years of Excellence', icon: Award },
-    { number: '500+', label: 'Students Guided', icon: Users },
+    { number: '5000+', label: 'Students Guided', icon: Users },
     { number: '100%', label: 'Result Oriented', icon: Target },
     { number: '3', label: 'Medium Options', icon: BookOpen }
   ];

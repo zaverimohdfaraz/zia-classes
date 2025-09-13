@@ -66,7 +66,7 @@ const Courses = () => {
       name: 'English Medium',
       description: 'Complete syllabus in English language',
       icon: Globe,
-      features: ['CBSE/ICSE/State Board', 'Modern teaching methods', 'International standards']
+      features: ['Maharashtra State Board', 'Modern teaching methods', 'International standards']
     },
     {
       name: 'Hindi Medium',
@@ -155,7 +155,7 @@ const Courses = () => {
                   <p className="text-muted-foreground">{classLevel.description}</p>
                 </CardHeader>
                 <CardContent>
-                  <h4 className="font-semibold text-foreground mb-3">Subjects Covered:</h4>
+                  <h4 className="font-semibold text-foreground mb-3">All Subjects Covered</h4>
                   {/* <div className="flex flex-wrap gap-2">
                     {classLevel.subjects.map((subject, idx) => (
                       <Badge key={idx} variant="outline" className="text-xs">

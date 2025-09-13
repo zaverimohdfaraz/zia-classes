@@ -17,7 +17,7 @@ const About = () => {
     { year: '2015', event: 'Expanded to Multiple Subjects' },
     { year: '2018', event: 'Introduced Audio-Video Teaching' },
     { year: '2020', event: 'Digital Learning Integration' },
-    { year: '2023', event: '500+ Students Milestone Achieved' }
+    { year: '2023', event: '5000+ Students Milestone Achieved' }
   ];
 
   const values = [
@@ -177,7 +177,7 @@ const About = () => {
                   <div className="text-sm text-muted-foreground">Years of Excellence</div>
                 </div>
                 <div className="bg-background/50 p-4 rounded-lg">
-                  <div className="text-3xl font-bold text-success">500+</div>
+                  <div className="text-3xl font-bold text-success">5000+</div>
                   <div className="text-sm text-muted-foreground">Happy Students</div>
                 </div>
                 <div className="bg-background/50 p-4 rounded-lg">
